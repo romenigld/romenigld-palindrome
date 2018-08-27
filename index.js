@@ -1,3 +1,5 @@
+module.exports = Phrase;
+
 // Adds 'reverse' to all strings.
 String.prototype.reverse = function() {
   return Array.from(this).reverse().join("");
@@ -6,11 +8,6 @@ String.prototype.reverse = function() {
 // Defines a Phrase object.
 function Phrase(content) {
   this.content = content;
-
-  // Makes the phrase LOUDER.
-  this.louder = function() {
-    return this.content.toUpperCase();
-  }
 
   // Returns content processed for aplindrome testing.
   this.processedContent = function processedContent() {

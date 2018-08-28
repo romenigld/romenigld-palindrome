@@ -20,9 +20,10 @@ function Phrase(content) {
   // new Phrase("Hello, World!").letters() === "Helloworld"
   this.letters = function letters() {
     let theLetters = [];
+    const letterRegex = /[a-z]/i;
     for (let i = 0; i < this.content.length; i++) {
       let character = this.content.charAt(i);
-      if (character.match(/[a-zA-Z]/)) {
+      if (character.match(letterRegex)) {
         theLetters.push(character);
       }
     }

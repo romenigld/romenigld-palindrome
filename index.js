@@ -11,9 +11,23 @@ function Phrase(content) {
 
   // Returns content processed for aplindrome testing.
   this.processedContent = function processedContent() {
-    //return this.content.toLowerCase();
-    return this.content;
+    return this.letters().toLowerCase();
+
   }
+
+  //Returns the letters in the content.
+  //for example:
+  // new Phrase("Hello, World!").letters() === "Helloworld"
+  this.letters = function letters() {
+    let theLetters = [];
+    for (let i = 0; i < this.content.length; i++) {
+      if (this.content.charAt(i).match(/[a-zA-Z]/)) {
+        theLetters.push(this.content.charAt(i));
+      }
+    }
+    return theLetters.join("");
+  }
+
   // Returns true if the phrase is a palindorme, false otherwise.
   this.palindrome = function palindrome() {
     return this.processedContent() === this.processedContent().reverse();

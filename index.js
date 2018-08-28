@@ -11,7 +11,8 @@ function Phrase(content) {
 
   // Returns content processed for aplindrome testing.
   this.processedContent = function processedContent() {
-    return this.content.toLowerCase();
+    //return this.content.toLowerCase();
+    return this.content;
   }
   // Returns true if the phrase is a palindorme, false otherwise.
   this.palindrome = function palindrome() {

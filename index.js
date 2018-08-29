@@ -19,7 +19,8 @@ function Phrase(content) {
   //for example:
   // new Phrase("Hello, World!").letters() === "Helloworld"
   this.letters = function letters() {
-    return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
+    const lettersRegEx = /[a-z]/i;
+    return Array.from(this.content).filter(c => c.match(lettersRegEx)).join("");
   }
 
   // Returns true if the phrase is a palindorme, false otherwise.
